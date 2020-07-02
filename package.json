@@ -1,5 +1,6 @@
 {
   "name": "todo-hooks",
+  "homepage": "https://ratibordas.github.io/Todo-App-with-React-hooks/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
