@@ -20,7 +20,7 @@ const App = () => {
   // todo items
   const todoData = [
     createItem("Some text"),
-    createItem("Drag me")
+    createItem("Also text")
   ]
 
 

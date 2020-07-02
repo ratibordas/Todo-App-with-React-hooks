@@ -1,19 +1,24 @@
 import React from 'react';
 import TodoListItem from '../todo-list-item/todo-list-item';
-import "./todo-list.scss"
+
+import "./todo-list.scss";
 
 
 
 
 const TodoList = ({todos, onDeleted, onToggleHighlight, onToggleDone}) => {
  
+ 
   
+
+
+
 
 
   const todoListElements = todos.map((todoItem) => {
     
     return (
-      <li key={todoItem.id}>
+      <li className='todo-list-li' key={todoItem.id}>
         <TodoListItem
         label={todoItem.label}
           done={todoItem.done}
@@ -29,9 +34,11 @@ const TodoList = ({todos, onDeleted, onToggleHighlight, onToggleDone}) => {
  
 
   return (
+    
     <ul className="todo-list">
       {todoListElements}
-    </ul>
+      </ul>
+     
   );
 };
 
