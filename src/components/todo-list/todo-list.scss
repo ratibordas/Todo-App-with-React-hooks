@@ -1,0 +1,15 @@
+.todo-list {
+  transform: translateY(-116px);
+  margin-right: 13px;
+   @media screen and (max-width: 376px) {
+       transform: translateY(-80px);
+         
+    }
+  li {
+    margin-bottom: 3px;
+    margin-top: 3px;
+  }
+  
+
+
+}

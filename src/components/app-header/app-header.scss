@@ -1,0 +1,14 @@
+.app-header {
+    transform: translateY(-66px);
+    @media screen and (max-width: 420px) {
+       transform: translateY(-40px);
+         span {
+        display: none;
+    }
+      @media screen and (max-width: 376px) {
+       transform: translateY(10px);
+         
+    }
+    }
+  
+}

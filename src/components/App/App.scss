@@ -1,5 +1,63 @@
-
-.active {
-    background-color: black;
-    color: white;
+@mixin button-style {
+    box-shadow: 0 2.5px 5px -1px rgba(50,50,93,.25), 0 1.5px 3px -1.5px rgba(0,0,0,.3);
+    transition: all .3s cubic-bezier(.215,.61,.355,1);
+    background-color: #fff;
+    // border: 0.1px solid rgb(207, 207, 207);
+    border: none;
+    color: rgb(119, 118, 118);
+    outline: none;
+    
 }
+$border-color: 0.1px solid rgb(207, 207, 207);
+
+body {
+    font-family: Neue;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+button {
+    @include button-style;
+    
+}
+
+input {
+    outline: none;
+}
+
+
+@font-face {
+    font-family: Neue;
+    src: url("../../fonts/HelveticaNeueCyr-Thin.woff");
+}
+
+
+.wrapper {
+  height: 50vh;
+  padding-top: 100px;
+  background:  center / contain no-repeat  url("../../img/mockup-bg.png");
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  @media screen and (max-width: 1280px) and (max-height: 690px) {
+      height: 65vh;
+  }
+  @media screen and (max-width: 420px) {
+      height: 50vh;
+  }
+
+  li {
+      list-style: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

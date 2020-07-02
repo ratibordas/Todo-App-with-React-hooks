@@ -1,0 +1,21 @@
+@import "../App/App.scss";
+
+form {
+    transform: translateY(-100px);
+     @media screen and (max-width: 420px) {
+      transform: translateY(-60px);
+  }
+    @media screen and (max-width: 376px) {
+       transform: translateY(-40px);
+         
+    }
+    button {
+        border-radius: 50%;
+        height: 2rem;
+        margin-left: 6px;
+    }
+    input {
+        border: $border-color;
+        border-radius: 8px
+    }
+}

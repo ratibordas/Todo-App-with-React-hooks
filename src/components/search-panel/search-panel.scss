@@ -1,0 +1,13 @@
+@import "../App/App.scss";
+
+.search-panel {
+    transform: translateY(-90px);
+     @media screen and (max-width: 376px) {
+       transform: translateY(-50px);
+         
+    }
+     input {
+        border: $border-color;
+        border-radius: 8px;
+    }
+}

@@ -1,14 +1,22 @@
 .todo-list-item {
     margin-right: 1rem;
-    
+    box-shadow: 0 2.5px 5px -1px rgba(50,50,93,.25), 0 1.5px 3px -1.5px rgba(0,0,0,.3);
+    span {
+      margin-right: 5rem;  
+    }
+    button {
+        border-radius: 50%;
+        height: 2rem;
+        width: 2rem;
+        margin-right: 6px;
+    }
 }
 
 .done {
         text-decoration: line-through;
-        color: green
     }
 
 .highlight {
-    color: tomato;
     font-weight: bold;
+    color: red;
 }

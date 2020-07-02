@@ -20,7 +20,7 @@ const App = () => {
   // todo items
   const todoData = [
     createItem("Some text"),
-    createItem("Zzzz")
+    createItem("Drag me")
   ]
 
 
@@ -121,17 +121,15 @@ const App = () => {
 
 
   return (
-    <section style={{ textAlign: "center", paddingTop: "100px" }}>
+    <section className="wrapper">
+      
       <AppHeader toDo={toDoCount} done={doneCount} />
       <div>
         <SearchPanel
         onSearchChange={onSearchChange}
         />
-        <ItemStatus
-        filterData={filterData}
-        onFilterChange={onFilterChange}
+         
         
-        />
       </div>
       <TodoList todos={visibleItems}
         onDeleted={(id) => deleteItem(id)}
@@ -139,8 +137,12 @@ const App = () => {
         onToggleHighlight={onToggleHighlight}
         
       />
-
-      <ItemAddForm onItemAdded={addItem}/>
+     <ItemAddForm onItemAdded={addItem}/>
+     
+      
+      <ItemStatus
+        filterData={filterData}
+        onFilterChange={onFilterChange}/>
     </section>
   );
 };
