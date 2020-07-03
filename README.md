@@ -1,1 +1,1 @@
-# Simple React Todo with hooks
+# Demo: https://ratibordas.github.io/Todo-App-with-React-hooks/
