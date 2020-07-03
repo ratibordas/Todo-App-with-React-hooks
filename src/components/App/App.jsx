@@ -122,7 +122,7 @@ const App = () => {
 
   return (
     <section className="wrapper">
-      
+      <div className="wrap">
       <AppHeader toDo={toDoCount} done={doneCount} />
       <div>
         <SearchPanel
@@ -142,7 +142,8 @@ const App = () => {
       
       <ItemStatus
         filterData={filterData}
-        onFilterChange={onFilterChange}/>
+          onFilterChange={onFilterChange} />
+        </div>
     </section>
   );
 };

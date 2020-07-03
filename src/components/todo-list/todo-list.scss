@@ -1,13 +1,15 @@
 .todo-list {
-  transform: translateY(-116px);
-  margin-right: 13px;
-   @media screen and (max-width: 376px) {
-       transform: translateY(-80px);
-         
-    }
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-8rem); 
   li {
-    margin-bottom: 3px;
-    margin-top: 3px;
+     width: 100%;
+     height: 2.5rem;
+     box-shadow: 0 2.5px 5px -1px rgba(50,50,93,.25), 0 1.5px 3px -1.5px rgba(0,0,0,.3);
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     transform: translateX(-20px);
   }
   
 
