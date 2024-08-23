@@ -45,15 +45,8 @@ const App = () => {
       })
  })
   
+  const onFilterChange = (filterData) => changeFilter(filterData)
   
- 
-  
-//Filter
-    const onFilterChange = (filterData) => {
-    changeFilter(filterData)
-  }
-
-
   const filter = (items, filterData) => {
     switch (filterData) {
       case "all":
