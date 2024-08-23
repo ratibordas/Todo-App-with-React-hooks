@@ -58,7 +58,7 @@ const App = () => {
       case "highlight":
         return items.filter((item) => item.highlight)
       default:
-      return items
+         return items
     }
   }
 
