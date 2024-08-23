@@ -2,20 +2,12 @@
 
 
 .btn-group {
-  transform: translateY(-50px);
-  @media screen and (max-width: 420px) {
-       transform: translateY(-40px);
-    }
-      @media screen and (max-width: 376px) {
-       transform: translateY(-80px);
-         
-    }
   
  button {
     height: 2rem;
     box-shadow: none;
     font-size: medium;
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 420px) {
        font-size: small
     }
 }   

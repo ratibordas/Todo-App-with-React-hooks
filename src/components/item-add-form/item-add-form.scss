@@ -1,7 +1,7 @@
 @import "../App/App.scss";
 
 form {
-    transform: translateY(-100px);
+    transform: translateY(-35px);
      @media screen and (max-width: 420px) {
       transform: translateY(-60px);
   }

@@ -6,8 +6,7 @@ import TodoList from '../todo-list/todo-list';
 import ItemStatus from '../item-status/item-status'
 import ItemAddForm from '../item-add-form/item-add-form';
 const App = () => {
-    
-  //create item func
+  
   const createItem = (label) => {
     return {
       label,
@@ -15,17 +14,13 @@ const App = () => {
       done: false,
       highlight: false,
       }
-
   }
-  // todo items
+  
   const todoData = [
     createItem("Some text"),
-    createItem("Drag me")
+    createItem("Also text")
   ]
-
-
-
-   //STATE
+  
   const [todoItems, todoItemsControl] = useState(todoData);
   const [term, changeTerm] = useState("");
   const [filterData, changeFilter] = useState("all");
@@ -45,32 +40,22 @@ const App = () => {
       })
  })
   
+  const onFilterChange = (filterData) => changeFilter(filterData)
   
- 
-  
-//Filter
-    const onFilterChange = (filterData) => {
-    changeFilter(filterData)
-  }
-
-
   const filter = (items, filterData) => {
     switch (filterData) {
+      case "done":
+        return items.filter((item) => item.done)
       case "all":
         return items
       case "active":
         return items.filter((item) => !item.done)
-      case "done":
-        return items.filter((item) => item.done)
       case "highlight":
         return items.filter((item) => item.highlight)
       default:
-      return items
+         return items
     }
   }
-
-
-
 
  const visibleItems = filter(search(todoItems, term), filterData)
 
@@ -122,7 +107,7 @@ const App = () => {
 
   return (
     <section className="wrapper">
-      
+      <div className="wrap">
       <AppHeader toDo={toDoCount} done={doneCount} />
       <div>
         <SearchPanel
@@ -142,7 +127,8 @@ const App = () => {
       
       <ItemStatus
         filterData={filterData}
-        onFilterChange={onFilterChange}/>
+          onFilterChange={onFilterChange} />
+        </div>
     </section>
   );
 };
