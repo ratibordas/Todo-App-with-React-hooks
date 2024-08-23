@@ -22,10 +22,7 @@ const App = () => {
     createItem("Some text"),
     createItem("Also text")
   ]
-
-  // Final check
-
-   //STATE
+  
   const [todoItems, todoItemsControl] = useState(todoData);
   const [term, changeTerm] = useState("");
   const [filterData, changeFilter] = useState("all");
