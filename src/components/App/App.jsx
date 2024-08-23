@@ -23,7 +23,7 @@ const App = () => {
     createItem("Also text")
   ]
 
-
+  // Final check
 
    //STATE
   const [todoItems, todoItemsControl] = useState(todoData);
