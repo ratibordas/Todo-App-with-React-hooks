@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import "./item-add-form.scss"
 
 const ItemAddForm = ({ onItemAdded }) => {
 
@@ -14,7 +14,10 @@ const ItemAddForm = ({ onItemAdded }) => {
     const onSubmit = (e) => {
         e.preventDefault();
         if (label === "") {
-         return false
+            return false
+        }
+        else if (label.length >= 15) {
+            return alert("So many letters =(");
         }
         onItemAdded(label);
         changeLabel("");
@@ -26,10 +29,10 @@ const ItemAddForm = ({ onItemAdded }) => {
 
             <input type="text"
                 onChange={onLabelChange}
-                placeholder="Add task"
+                placeholder="Do it"
                 value={label}/>
 
-            <button type="submit">Add item</button>
+            <button type="submit">Add</button>
 
         </form>
     )

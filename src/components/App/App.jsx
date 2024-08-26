@@ -6,7 +6,8 @@ import TodoList from '../todo-list/todo-list';
 import ItemStatus from '../item-status/item-status'
 import ItemAddForm from '../item-add-form/item-add-form';
 const App = () => {
-    
+console.log('Master change 2');
+
   //create item func
   const createItem = (label) => {
     return {
@@ -15,17 +16,13 @@ const App = () => {
       done: false,
       highlight: false,
       }
-
   }
-  // todo items
+  
   const todoData = [
     createItem("Some text"),
-    createItem("Zzzz")
+    createItem("Also text")
   ]
-
-
-
-   //STATE
+  
   const [todoItems, todoItemsControl] = useState(todoData);
   const [term, changeTerm] = useState("");
   const [filterData, changeFilter] = useState("all");
@@ -45,32 +42,22 @@ const App = () => {
       })
  })
   
+  const onFilterChange = (filterData) => changeFilter(filterData)
   
- 
-  
-//Filter
-    const onFilterChange = (filterData) => {
-    changeFilter(filterData)
-  }
-
-
   const filter = (items, filterData) => {
     switch (filterData) {
+      case "done":
+        return items.filter((item) => item.done)
       case "all":
         return items
       case "active":
         return items.filter((item) => !item.done)
-      case "done":
-        return items.filter((item) => item.done)
       case "highlight":
         return items.filter((item) => item.highlight)
       default:
-      return items
+         return items
     }
   }
-
-
-
 
  const visibleItems = filter(search(todoItems, term), filterData)
 
@@ -121,17 +108,15 @@ const App = () => {
 
 
   return (
-    <section style={{ textAlign: "center", paddingTop: "100px" }}>
+    <section className="wrapper">
+      <div className="wrap">
       <AppHeader toDo={toDoCount} done={doneCount} />
       <div>
         <SearchPanel
         onSearchChange={onSearchChange}
         />
-        <ItemStatus
-        filterData={filterData}
-        onFilterChange={onFilterChange}
+         
         
-        />
       </div>
       <TodoList todos={visibleItems}
         onDeleted={(id) => deleteItem(id)}
@@ -139,8 +124,13 @@ const App = () => {
         onToggleHighlight={onToggleHighlight}
         
       />
-
-      <ItemAddForm onItemAdded={addItem}/>
+     <ItemAddForm onItemAdded={addItem}/>
+     
+      
+      <ItemStatus
+        filterData={filterData}
+          onFilterChange={onFilterChange} />
+        </div>
     </section>
   );
 };

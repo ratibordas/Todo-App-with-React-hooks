@@ -1,0 +1,9 @@
+@import "../App/App.scss";
+
+.search-panel {
+    transform: translateY(-9rem);
+     input {
+        border: $border-color;
+        border-radius: 8px;
+    }
+}

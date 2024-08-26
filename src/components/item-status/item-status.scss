@@ -1,0 +1,20 @@
+@import "../App/App.scss";
+
+
+.btn-group {
+  
+ button {
+    height: 2rem;
+    box-shadow: none;
+    font-size: medium;
+    @media screen and (max-width: 420px) {
+       font-size: small
+    }
+}   
+}
+
+
+.active {
+    background: black;
+    color: white;
+}

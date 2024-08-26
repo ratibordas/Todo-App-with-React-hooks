@@ -2,17 +2,7 @@ import React from 'react';
 import "./todo-list-item.scss"
 
 
-// `${done ? "todo-list-item done" : "todo-list-item"} ${highlight ? "highlight" : ""}`
-  //state 
-  // const [done, setDone] = useState(false);
-  // const [highlight, setHighlight] = useState(false);
 
-  //done func
-  // const onClickDone = () => setDone(done => !done);
-
-  //highlight func
-  // const onClickHighlight = () => setHighlight(highlight => !highlight);
-  
 
 
 const TodoListItem = ({ label, onDeleted, onToggleDone, onToggleHighlight, done, highlight }) => {
@@ -21,9 +11,10 @@ const TodoListItem = ({ label, onDeleted, onToggleDone, onToggleHighlight, done,
   
   return (
 
-    <span className={`${done ? "todo-list-item done" : "todo-list-item"} ${highlight ? "highlight" : ""}`}>
+    <span className="todo-list-item">
       <span  
-        onClick={onToggleDone}>
+        onClick={onToggleDone}
+      className={`${done ? " done" : ""} ${highlight ? " highlight" : ""}`}>
         {label}
       </span>
       <button type="button" onClick={onToggleHighlight}>!</button>
