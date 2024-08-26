@@ -6,7 +6,8 @@ import TodoList from '../todo-list/todo-list';
 import ItemStatus from '../item-status/item-status'
 import ItemAddForm from '../item-add-form/item-add-form';
 const App = () => {
-    
+console.log('Master change');
+
   //create item func
   const createItem = (label) => {
     return {
